@@ -15,3 +15,32 @@ for (let index  of g1) {
     
 }
 
+
+function* g2(){
+    yield 1
+    yield 2
+    yield 3
+}
+
+
+function* g3(){
+    yield* g2()
+    yield 10
+    yield 20
+    yield 30
+    yield sayHello()
+}
+
+function sayHello() {
+    console.log('Hi')
+    
+}
+
+const g3c = g3()
+for(let i of g3c){
+    if (i === typeof('number')) {
+        console.log(i)
+        
+    }
+
+}
