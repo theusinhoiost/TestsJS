@@ -42,3 +42,13 @@ Object.setPrototypeOf(p2,Produto.prototype)
 
 const p2add = p2.add(37.5)
 console.log(p2add)
+
+
+const p3 = Object.create(Produto.prototype, {
+    price: {
+        value: 32
+    },
+    size: {
+        configurable: true
+    }
+}) // but need the keys 
