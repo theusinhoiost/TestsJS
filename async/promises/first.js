@@ -12,7 +12,7 @@ function connection(msg, time) {
 
 
 connection('1',random()).then((value)=> {console.log(value)
-    return connection('Last',random()).then((value)=>{console.log(value)})
+    return connection('Last',random()).then((value)=>{console.log(value)}).catch(e=> console.log(e))
 })
 
 
