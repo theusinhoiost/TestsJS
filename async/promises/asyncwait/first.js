@@ -14,13 +14,13 @@ function connection(msg) {
 }
 
 
-/* connection('Fase 1')
+/* connection('Path 1')
     .then(value => {
         console.log(value)
-        return connection('Fase 2')
+        return connection('Path 2')
     }).then(value => {
         console.log(value)
-        return connection('Fase 3')
+        return connection('Path 3')
     }).then(value => console.log(value))
     .catch(e => console.log(e))
  */
@@ -28,12 +28,12 @@ function connection(msg) {
 
 async function execute() {
     try {
-        const fase1 = await connection('Fase 1');
-        console.log(fase1)
-        const fase2 =await connection("Fase 2");
-        console.log(fase2)
-        const fase3 =await connection('Fase 3');
-        console.log(fase3)
+        const path1 = await connection('path 1');
+        console.log(path1)
+        const path2 =await connection("path 2");
+        console.log(path2)
+        const path3 =await connection('path 3');
+        console.log(path3)
     } catch (error) {
         throw new Error("WRONG IN");
         
